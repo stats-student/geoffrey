@@ -1,5 +1,6 @@
 import logging
 import pathlib
+import shutil
 import typer
 
 
@@ -22,6 +23,12 @@ def data_source(
     if pathlib.Path(".geoff").exists():
         logger.info(f"adding data source {name}")
         pathlib.Path(f"data_sources/{name}").mkdir()
+        
+        for file in (pathlib.Path(__file__).parent / "templates/data_sources").glob("*"):
+            logger.info(f"Copying {file.name} to data_sources folder")
+
+            shutil.copy(str(file), str(f"data_sources/{name}/{file.name}"))
+
     else:
         raise RuntimeError(
             "This directory isn't managed by geoff. Please change to a directory that is"

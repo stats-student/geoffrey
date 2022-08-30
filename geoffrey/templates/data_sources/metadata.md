@@ -1,21 +1,22 @@
-# <project_name> metadata
+# <-project_name-> metadata
 
 ## Database details
 
 | field | value |
 | :----- | :----- |
-| database name(s) | |
-| tables accessed | |
-| tables created | |
+| database name(s) | *e.g datasets* |
+| tables accessed | *e.g iris* |
+| tables created | *e.g iris_transformed* |
 
 ## Data dictionary
 
 | data field | data type | description |
 | :--------- | :-------- | :---------- |
-| <span style="color: forestgreen;"> e.g ID</span> | <span style="color: forestgreen;"> e.g INT</span> | <span style="color: forestgreen;"> e.g A unique identifier for each record</span> |
-| <span style="color: forestgreen;"> e.g sepal_width</span> | <span style="color: forestgreen;"> e.g FLOAT </span> | <span style="color: forestgreen;"> e.g The width of the sepal part of the plant</span> |
+| *e.g ID* | *e.g INT* | *e.g A unique identifier for each record* |
+| *e.g sepal_width* | *e.g FLOAT* | *e.g The width of the sepal part of the plant* |
 
 ## Key people
 
 | name | details |
 | :--- | :------ |
+| *e.g Ronald Fisher* | *Gathered the data and is the subject metter expert* |

@@ -73,9 +73,9 @@ def test_database_source_files_created(create_root, option):
 
     assert result.exit_code == 0
     assert pathlib.Path(
-        "./data_sources/test_db_data_source/test_db_data_source_metadata.md"
+        "./data_sources/test_db_data_source/metadata.md"
     ).exists()
     assert filecmp.cmp(
-        "./data_sources/test_db_data_source/test_db_data_source_metadata.md",
-        "../../geoffrey/templates/data_sources/metadata.md"
+        "./data_sources/test_db_data_source/metadata.md",
+        (pathlib.Path(__file__) / "../../../geoffrey/templates/data_sources/metadata.md").resolve()
     )
