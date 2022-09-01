@@ -14,7 +14,7 @@ def data_source(
     name: str,
     database_source: bool = typer.Option(False, "--database", "-d"),
     extract_source: bool = typer.Option(False, "--extract", "-e"),
-    web_source: bool = typer.Option(False, "--web-download", "-w")
+    web_source: bool = typer.Option(False, "--web-download", "-w"),
 ):
     """
     Adds a data source folder called NAME in the data_sources
@@ -23,11 +23,26 @@ def data_source(
     if pathlib.Path(".geoff").exists():
         logger.info(f"adding data source {name}")
         pathlib.Path(f"data_sources/{name}").mkdir()
-        
-        for file in (pathlib.Path(__file__).parent / "templates/data_sources").glob("*"):
-            logger.info(f"Copying {file.name} to data_sources folder")
 
-            shutil.copy(str(file), str(f"data_sources/{name}/{file.name}"))
+        if database_source:
+            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/db_metadata.md"
+        elif extract_source:
+            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/extract_metadata.md"
+        elif web_source:
+            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/web_metadata.md"
+        else:
+            metadata_template = None
+
+        if metadata_template:
+            logger.info(f"Copying {metadata_template.name} to data_sources folder")
+            shutil.copy(str(metadata_template), str(f"data_sources/{name}/metadata.md"))
+
+            with open(f"data_sources/{name}/metadata.md", "r") as md:
+                contents = md.read()
+                contents = contents.replace("<-project_name->", name)
+
+            with open(f"data_sources/{name}/metadata.md", "w") as md:
+                md.write(contents)
 
     else:
         raise RuntimeError(
