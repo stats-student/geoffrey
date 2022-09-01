@@ -1,12 +1,11 @@
 # <-project_name-> metadata
 
-## Database details
+## Website details
 
-| field | value |
-| :----- | :----- |
-| database name(s) | *e.g datasets* |
-| tables accessed | *e.g iris* |
-| tables created | *e.g iris_transformed* |
+| download file | donwload link | donwloaded on | additional details |
+| :------------ | :------------ | :------------ | :----------------- |
+| *e.g iris.data* | *e.g https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data* | *e.g 2022-01-01* | *e.g https://archive.ics.uci.edu/ml/datasets/iris* |
+
 
 ## Data dictionary
 
@@ -20,3 +19,4 @@
 | name | details |
 | :--- | :------ |
 | *e.g Ronald Fisher* | *Gathered the data and is the subject metter expert* |
+| *e.g Michael Marshall* | *(MARSHALL%PLU@io.arc.nasa.gov) Donated the dataset to the UCI machine learning repository* |

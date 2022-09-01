@@ -2,11 +2,9 @@
 
 ## Extract details
 
-| field | value |
-| :----- | :----- |
-| extract file | *e.g iris.csv* |
-| extract query | *e.g SELECT * FROM iris_table* |
-| date received | *e.g 2022-04-01* |
+| extract file | extract query | extractor | date received |
+| :----------- | :------------ | :-------- | :------------ |
+| *e.g iris.csv* | *e.g SELECT * FROM iris_table* | *e.g Ronald Fisher - data collection team* | *e.g 2022-04-01* |
 
 ## Data dictionary
 
@@ -19,4 +17,4 @@
 
 | name | details |
 | :--- | :------ |
-| *e.g Ronald Fisher* | *Gathered the data and is the subject metter expert* |
+| *e.g Ronald Fisher* | *Gathered the data and is the subject metter expert. Ron and the data collection team have access to the database and extracted it to a csv* |

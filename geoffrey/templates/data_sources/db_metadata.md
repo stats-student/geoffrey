@@ -2,11 +2,9 @@
 
 ## Database details
 
-| field | value |
-| :----- | :----- |
-| database name(s) | *e.g datasets* |
-| tables accessed | *e.g iris* |
-| tables created | *e.g iris_transformed* |
+| database name(s) | tables accessed | tables_created |
+| :--------------- | :-------------- | :------------- |
+| *e.g datasets* | *e.g iris* | *e.g iris_transformed* |
 
 ## Data dictionary
 
