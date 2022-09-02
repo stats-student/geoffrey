@@ -26,7 +26,7 @@ jobs:
       run: |
         git worktree add gh-pages
         git config user.name "Deploy from CI"
-        git user.email ""
+        git config user.email ""
         cd gh-pages
         git update-ref -d refs/heads/gh-pages
         rm -rf *
