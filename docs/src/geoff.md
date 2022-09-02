@@ -24,7 +24,7 @@ Geoff will listen to your commands and carry out the relevant project admin.
 
 ## Examples
 
-```console
+```shell
 foo@bar:~$ geoff create test_project
 foo@bar:~$ geoff add exploration some_exploration
 foo@bar:~$ geoff add data_source some_data_source

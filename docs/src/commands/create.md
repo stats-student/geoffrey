@@ -4,7 +4,7 @@
 
 # geoff create
 
-```console
+```shell
 geoff create [OPTIONS] NAME
 ```
 
@@ -17,13 +17,13 @@ The name of the project. This can be a project name or a path with the final dir
 
 Project name
 
-```console
+```shell
 foo@bar:~$ geoff create test_project
 ```
 
 Project with path
 
-```console
+```shell
 
 foo@bar:~$ geoff create path/to/test_project
 ```
@@ -46,7 +46,7 @@ Shows help message and exits
 
 Create a project
 
-```console
+```shell
 foo@bar:~$ geoff create test_project
 🚀 test_project created!
 
@@ -61,7 +61,7 @@ test_project
 
 Create a project and parents of specified path
 
-```console
+```shell
 foo@bar:~$ geoff create --parents path/to/test_project
 🚀 test_project created!
 
