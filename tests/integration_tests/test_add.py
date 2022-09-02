@@ -69,7 +69,9 @@ def test_add_extract_data_source_folder_created(create_root, option):
 
 @pytest.mark.parametrize("option", ["--web-download", "-w"])
 def test_add_web_download_data_source_folder_created(create_root, option):
-    result = runner.invoke(app, ["data-source", "test_web_download_data_source", option])
+    result = runner.invoke(
+        app, ["data-source", "test_web_download_data_source", option]
+    )
 
     assert result.exit_code == 0
     assert pathlib.Path("./data_sources/test_web_download_data_source").exists()
@@ -82,6 +84,7 @@ def test_database_source_files_created(create_root, option):
     assert result.exit_code == 0
     assert pathlib.Path("./data_sources/test_db_data_source/metadata.md").exists()
 
+
 @pytest.mark.parametrize("option", ["--database", "-d"])
 def test_database_source_files_placeholders_replaced(create_root, option):
     result = runner.invoke(app, ["data-source", "test_db_data_source", option])
@@ -92,12 +95,14 @@ def test_database_source_files_placeholders_replaced(create_root, option):
         assert "<-project_name->" not in md_contents
         assert "# test_db_data_source metadata" in md_contents
 
+
 @pytest.mark.parametrize("option", ["--extract", "-e"])
 def test_extract_source_files_created(create_root, option):
     result = runner.invoke(app, ["data-source", "test_extract_data_source", option])
 
     assert result.exit_code == 0
     assert pathlib.Path("./data_sources/test_extract_data_source/metadata.md").exists()
+
 
 @pytest.mark.parametrize("option", ["--extract", "-e"])
 def test_extract_source_files_placeholders_replaced(create_root, option):
@@ -109,16 +114,24 @@ def test_extract_source_files_placeholders_replaced(create_root, option):
         assert "<-project_name->" not in md_contents
         assert "# test_extract_data_source metadata" in md_contents
 
+
 @pytest.mark.parametrize("option", ["--web-download", "-w"])
 def test_extract_source_files_created(create_root, option):
-    result = runner.invoke(app, ["data-source", "test_web_download_data_source", option])
+    result = runner.invoke(
+        app, ["data-source", "test_web_download_data_source", option]
+    )
 
     assert result.exit_code == 0
-    assert pathlib.Path("./data_sources/test_web_download_data_source/metadata.md").exists()
+    assert pathlib.Path(
+        "./data_sources/test_web_download_data_source/metadata.md"
+    ).exists()
+
 
 @pytest.mark.parametrize("option", ["--web-download", "-w"])
 def test_extract_source_files_placeholders_replaced(create_root, option):
-    result = runner.invoke(app, ["data-source", "test_web_download_data_source", option])
+    result = runner.invoke(
+        app, ["data-source", "test_web_download_data_source", option]
+    )
 
     assert result.exit_code == 0
     with open("./data_sources/test_web_download_data_source/metadata.md", "r") as md:

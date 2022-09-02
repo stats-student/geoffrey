@@ -25,11 +25,18 @@ def data_source(
         pathlib.Path(f"data_sources/{name}").mkdir()
 
         if database_source:
-            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/db_metadata.md"
+            metadata_template = (
+                pathlib.Path(__file__).parent / "templates/data_sources/db_metadata.md"
+            )
         elif extract_source:
-            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/extract_metadata.md"
+            metadata_template = (
+                pathlib.Path(__file__).parent
+                / "templates/data_sources/extract_metadata.md"
+            )
         elif web_source:
-            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/web_metadata.md"
+            metadata_template = (
+                pathlib.Path(__file__).parent / "templates/data_sources/web_metadata.md"
+            )
         else:
             metadata_template = None
 
