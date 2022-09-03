@@ -1,6 +1,6 @@
 <p align="center">
     <img src="docs/src/static/images/geoffrey-logo.png#gh-light-mode-only">
-    <img src="docs/src/static/images/gift-box.png#gh-dark-mode-only">
+    <img src="docs/src/static/images/geoffrey-logo-dark.png#gh-dark-mode-only">
 </p>
 
 <p align="center">
