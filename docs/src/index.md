@@ -12,10 +12,13 @@ Geoffrey is a tool to automate and standardise(ish) the admin in my data science
 <br>
 My general workflow for a data science project consists of 4 steps:
 
-* 📄 Data sources
-* 🔎 Exploration
-* 📈 Models
-* 🎁 Products
+<img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle;">  Data sources  
+  
+<img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;"> Exploration
+  
+<img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;"> Models
+  
+<img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;"> Products
 
 Geoffrey allows you to create projects and add in each of these 4 components in a modular way.
 
