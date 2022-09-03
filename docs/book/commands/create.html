@@ -147,7 +147,7 @@
 <h1 id="geoff-create"><a class="header" href="#geoff-create">geoff create</a></h1>
 <pre><code class="language-shell">geoff create [OPTIONS] NAME
 </code></pre>
-<p>Creates a new project called <code>NAME</code></p>
+<p>Creates a new project called <code>NAME</code> and creates the 4 sub directories that geoff manages along with a README and project scoping template.</p>
 <h2 id="arguments"><a class="header" href="#arguments">Arguments</a></h2>
 <p><code>name</code>
 The name of the project. This can be a project name or a path with the final directory in the path being the project name.</p>
@@ -220,6 +220,22 @@ test_project
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

@@ -152,11 +152,19 @@ data science projects
 Geoffrey is a tool to automate and standardise(ish) the admin in my data science projects by creating folders and common files to speed up project setup and ensure that every project has a similar layout.
 <br>
 My general workflow for a data science project consists of 4 steps:
-<ul>
-<li>📄 Data sources</li>
-<li>🔎 Exploration</li>
-<li>📈 Models</li>
-<li>🎁 Products</li>
+<ul style="list-style: none;">
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle;">  Data sources 
+  </li>
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;"> Exploration
+  </li>
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;"> Models
+  </li>
+  <li>
+    <img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;"> Products
+  </li>
 </ul>
 <p>Geoffrey allows you to create projects and add in each of these 4 components in a modular way.</p>
 <p>The quickstart is below and the manual for the different commands is <a href="docs/geoff.html">here</a></p>
@@ -186,8 +194,6 @@ test_project
 <h5 id="add-an-exploration"><a class="header" href="#add-an-exploration">Add an exploration</a></h5>
 <h5 id="add-a-model"><a class="header" href="#add-a-model">Add a model</a></h5>
 <h5 id="add-a-product"><a class="header" href="#add-a-product">Add a product</a></h5>
-<h3 id="attribution"><a class="header" href="#attribution">Attribution</a></h3>
-<p><a href="https://www.flaticon.com/free-icons/professor" title="icon">Logo icon created by Freepik - Flaticon</a></p>
 
                     </main>
 
@@ -212,6 +218,22 @@ test_project
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

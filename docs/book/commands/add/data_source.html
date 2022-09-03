@@ -141,7 +141,60 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="data-source"><a class="header" href="#data-source">Data Source</a></h1>
+                        <p align="center">
+    <img src="../../static/images/geoffrey-logo.png">
+</p>
+<h1 id="geoff-add-data-source"><a class="header" href="#geoff-add-data-source">geoff add data-source</a></h1>
+<pre><code class="language-shell">geoff add data-source [OPTIONS] NAME
+</code></pre>
+<p>Adds a new folder in data_sources folder called <code>NAME</code> which contains a metadata markdown document to populate. The metadata file captures some details about the data source and any key people that were involved in the collection or authorisation to access the data.</p>
+<p>There are three different metadata templates that are created depending on whether the data source is a </p>
+<p><img src="../../static/images/db.png" height="25px" width="25px" style="vertical-align: middle;"> database source</p>
+<p><img src="../../static/images/folder.png" height="25px" width="25px" style="vertical-align: middle;"> extract source</p>
+<img src="../../static/images/cloud-download.png" height="25px" width="25px" style="vertical-align: middle;"> 
+web download source
+<h2 id="arguments"><a class="header" href="#arguments">Arguments</a></h2>
+<p><code>name</code>
+The name of the project. This can be a project name or a path with the final directory in the path being the project name.</p>
+<p>Project name</p>
+<pre><code class="language-shell">foo@bar:~$ geoff create test_project
+</code></pre>
+<p>Project with path</p>
+<pre><code class="language-shell">
+foo@bar:~$ geoff create path/to/test_project
+</code></pre>
+<p>If a path is supplied and the parents of the project name don't exist, the parents either need to be created manually or <code>--parents</code> needs to be supplied.</p>
+<h2 id="options"><a class="header" href="#options">Options</a></h2>
+<p><code>--parents</code> \ <code>--no-parents</code></p>
+<p>Default: <code>--no-parents</code></p>
+<p>Whether to create the parents of the supplied path or not.</p>
+<p><code>--help</code>
+Shows help message and exits</p>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<p>Create a project</p>
+<pre><code class="language-shell">foo@bar:~$ geoff create test_project
+🚀 test_project created!
+
+test_project
+├── 🖿 data_sources
+├── 🖿 explorations
+├── 🖿 models
+├── 🖿 products
+├── 🗋 README.md
+└── 🗋 project_scoping.md
+</code></pre>
+<p>Create a project and parents of specified path</p>
+<pre><code class="language-shell">foo@bar:~$ geoff create --parents path/to/test_project
+🚀 test_project created!
+
+test_project
+├── 🖿 data_sources
+├── 🖿 explorations
+├── 🖿 models
+├── 🖿 products
+├── 🗋 README.md
+└── 🗋 project_scoping.md
+</code></pre>
 
                     </main>
 
@@ -172,6 +225,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
