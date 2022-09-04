@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="en" class="sidebar-visible no-js light">
     <head>
+        <script type="text/javascript" src=""></script>
+        
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Getting started - Geoffrey documentation</title>
@@ -29,6 +31,7 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/my-css.css">
 
     </head>
     <body>
@@ -80,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html" class="active">Getting started</a></li><li class="chapter-item expanded affix "><a href="geoff.html">geoff</a></li><li class="chapter-item expanded affix "><a href="commands/create.html">create</a></li><li class="chapter-item expanded affix "><a href="commands/add.html">add</a></li><li class="chapter-item expanded "><a href="commands/add/data_source.html"><strong aria-hidden="true">1.</strong> data_source</a></li><li class="chapter-item expanded "><a href="commands/add/exploration.html"><strong aria-hidden="true">2.</strong> exploration</a></li><li class="chapter-item expanded "><a href="commands/add/model.html"><strong aria-hidden="true">3.</strong> model</a></li><li class="chapter-item expanded "><a href="commands/add/product.html"><strong aria-hidden="true">4.</strong> product</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html" class="active">Getting started</a></li><li class="chapter-item expanded affix "><a href="geoff.html">geoff</a></li><li class="chapter-item expanded affix "><a href="commands/create.html">create</a></li><li class="chapter-item expanded affix "><a href="commands/add.html">add</a></li><li class="chapter-item expanded "><a href="commands/add/data_source.html">data_source</a></li><li class="chapter-item expanded "><a href="commands/add/exploration.html">exploration</a></li><li class="chapter-item expanded "><a href="commands/add/model.html">model</a></li><li class="chapter-item expanded "><a href="commands/add/product.html">product</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -115,6 +118,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/stats-student/geoffrey" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -142,7 +148,7 @@
                 <div id="content" class="content">
                     <main>
                         <p align="center">
-    <img src="static/images/geoffrey-logo.png">
+    <img src="static/images/geoffrey-logo.png" class="logo">
 </p>
 <p align="center">
 A simple tool to automate the creation of some folders and files for my
@@ -154,16 +160,16 @@ Geoffrey is a tool to automate and standardise(ish) the admin in my data science
 My general workflow for a data science project consists of 4 steps:
 <ul style="list-style: none;">
   <li style="margin-bottom: 10px;">
-    <img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle;">  Data sources 
+    <img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle; padding-right: 5px;">  Data sources 
   </li>
   <li style="margin-bottom: 10px;">
-    <img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;"> Exploration
+    <img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Exploration
   </li>
   <li style="margin-bottom: 10px;">
-    <img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;"> Models
+    <img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Models
   </li>
   <li>
-    <img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;"> Products
+    <img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Products
   </li>
 </ul>
 <p>Geoffrey allows you to create projects and add in each of these 4 components in a modular way.</p>
@@ -251,6 +257,7 @@ test_project
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/my-js.js"></script>
 
 
     </body>

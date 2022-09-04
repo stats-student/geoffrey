@@ -22,23 +22,15 @@ web download source
 ## Arguments
 
 `name`
-The name of the project. This can be a project name or a path with the final directory in the path being the project name.
+The name of the data sources
 
-Project name
-
-```shell
-foo@bar:~$ geoff create test_project
-```
-
-Project with path
+Data source name
 
 ```shell
-
-foo@bar:~$ geoff create path/to/test_project
+foo@bar:~$ geoff create iris
 ```
 
-
-If a path is supplied and the parents of the project name don't exist, the parents either need to be created manually or `--parents` needs to be supplied.
+If no options are passed a directory is created with an empty metadata.md
 
 ## Options
 

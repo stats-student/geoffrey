@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="static/images/geoffrey-logo.png">
+    <img src="static/images/geoffrey-logo.png" class="logo">
 </p>
 
 <p align="center">
@@ -14,16 +14,16 @@ My general workflow for a data science project consists of 4 steps:
   
 <ul style="list-style: none;">
   <li style="margin-bottom: 10px;">
-    <img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle;">  Data sources 
+    <img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle; padding-right: 5px;">  Data sources 
   </li>
   <li style="margin-bottom: 10px;">
-    <img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;"> Exploration
+    <img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Exploration
   </li>
   <li style="margin-bottom: 10px;">
-    <img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;"> Models
+    <img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Models
   </li>
   <li>
-    <img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;"> Products
+    <img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Products
   </li>
 </ul>
 

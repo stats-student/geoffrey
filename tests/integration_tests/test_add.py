@@ -51,6 +51,27 @@ def test_add_data_source_non_geoff_directory(create_root):
     )
 
 
+def test_add_data_source_no_options_folder_created(create_root):
+    result = runner.invoke(app, ["data-source", "test_data_source"])
+
+    assert result.exit_code == 0
+    assert pathlib.Path("./data_sources/test_data_source").exists()
+
+def test_add_data_source_no_options_files_created(create_root):
+    result = runner.invoke(app, ["data-source", "test_data_source"])
+
+    assert result.exit_code == 0
+    assert pathlib.Path("./data_sources/test_data_source/metadata.md").exists()
+
+def test_add_data_source_no_options_empty_template(create_root):
+    result = runner.invoke(app, ["data-source", "test_data_source"])
+
+    assert result.exit_code == 0
+    with open("./data_sources/test_data_source/metadata.md", "r") as md:
+        md_contents = md.read()
+        assert md_contents == "# test_data_source metadata"
+
+
 @pytest.mark.parametrize("option", ["--database", "-d"])
 def test_add_database_data_source_folder_created(create_root, option):
     result = runner.invoke(app, ["data-source", "test_db_data_source", option])
