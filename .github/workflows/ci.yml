@@ -1,0 +1,42 @@
+# File adapted slightly from the following article
+# https://medium.com/@vanflymen/blazing-fast-ci-with-github-actions-poetry-black-and-pytest-9e74299dd4a5
+name: ci
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: ["3.7.x", "3.8.x", "3.9.x", "3.10.x"]
+        os: ["ubuntu-latest", "macOS-latest", "windows-latest"]
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-in-project: false
+        virtualenvs-path: ~/.venv
+    - name: Install dependencies
+      run: |
+        poetry install
+    - name: Code quality
+      run: |
+        poetry run black . --check --extend-exclude=docs
+    - name: Test with pytest
+      run: |
+        poetry run pytest --cov=geoffrey/ --cov-report=xml
+    - name: Upload coverage
+      uses: codecov/codecov-action@v3
