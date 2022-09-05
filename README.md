@@ -8,7 +8,7 @@ data science projects
 </p>
 
 <p align="center">
-    <img src="https://github.com/danielyates2/geoffrey/actions/workflows/ci.yml/badge.svg" alt="ci">
+    <img src="https://github.com/stats-student/geoffrey/actions/workflows/ci.yml/badge.svg" alt="ci">
     <a href="https://codecov.io/gh/stats-student/geoffrey" > 
         <img src="https://codecov.io/gh/stats-student/geoffrey/branch/main/graph/badge.svg?token=ZFU8ZYE9HG"/> 
     </a>
