@@ -105,7 +105,7 @@ class CreateCommand:
         Creates a tree to display what folders and files have been
         created
         """
-        tree = Tree(self.path.stem)
+        tree = Tree(f"[gold1]\U0001F5BF {self.path.stem}")
         _ = tree.add("[gold1]\U0001F5BF [bold dodger_blue2]data_sources")
         _ = tree.add("[gold1]\U0001F5BF [bold dodger_blue2]explorations")
         _ = tree.add("[gold1]\U0001F5BF [bold dodger_blue2]models")
