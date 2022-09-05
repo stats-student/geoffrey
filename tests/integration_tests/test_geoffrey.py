@@ -23,7 +23,9 @@ def test_sub_command_exists():
     assert result.exit_code == 0
 
 
-@pytest.mark.parametrize("add_command", ["data-source", "exploration", "model", "product"])
+@pytest.mark.parametrize(
+    "add_command", ["data-source", "exploration", "model", "product"]
+)
 def test_add_non_geoff_directory(create_root, add_command):
     os.chdir("..")
 

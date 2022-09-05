@@ -28,13 +28,23 @@ def data_source(
         pathlib.Path(f"data_sources/{name}").mkdir()
 
         if database_source:
-            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/db_metadata.md"
+            metadata_template = (
+                pathlib.Path(__file__).parent / "templates/data_sources/db_metadata.md"
+            )
         elif extract_source:
-            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/extract_metadata.md"
+            metadata_template = (
+                pathlib.Path(__file__).parent
+                / "templates/data_sources/extract_metadata.md"
+            )
         elif web_source:
-            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/web_metadata.md"
+            metadata_template = (
+                pathlib.Path(__file__).parent / "templates/data_sources/web_metadata.md"
+            )
         else:
-            metadata_template = pathlib.Path(__file__).parent / "templates/data_sources/empty_metadata.md"
+            metadata_template = (
+                pathlib.Path(__file__).parent
+                / "templates/data_sources/empty_metadata.md"
+            )
 
         logger.info(f"Copying {metadata_template.name} to data_sources folder")
         shutil.copy(str(metadata_template), str(f"data_sources/{name}/metadata.md"))
@@ -45,7 +55,7 @@ def data_source(
 
         with open(f"data_sources/{name}/metadata.md", "w") as md:
             md.write(contents)
-        
+
         tree = Tree("[gold1]\U0001F5BF [bold dodger_blue2]data_sources")
         tree.add("[gold1]\U0001F5BF [bold dodger_blue2]test_data_sources")
         tree.add("[honeydew2]\U0001F5CB [spring_green2]metadata.md")

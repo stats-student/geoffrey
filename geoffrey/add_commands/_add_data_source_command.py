@@ -7,7 +7,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-class AddDataSourceCommand:
 
+class AddDataSourceCommand:
     def __init__(self) -> None:
         pass
