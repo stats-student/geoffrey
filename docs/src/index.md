@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="static/images/geoffrey-logo.png">
+    <img src="static/images/geoffrey-logo.png" class="logo">
 </p>
 
 <p align="center">
@@ -11,11 +11,21 @@ data science projects
 Geoffrey is a tool to automate and standardise(ish) the admin in my data science projects by creating folders and common files to speed up project setup and ensure that every project has a similar layout.
 <br>
 My general workflow for a data science project consists of 4 steps:
-
-* 📄 Data sources
-* 🔎 Exploration
-* 📈 Models
-* 🎁 Products
+  
+<ul style="list-style: none;">
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle; padding-right: 5px;">  Data sources 
+  </li>
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Exploration
+  </li>
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Models
+  </li>
+  <li>
+    <img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Products
+  </li>
+</ul>
 
 Geoffrey allows you to create projects and add in each of these 4 components in a modular way.
 
@@ -53,7 +63,3 @@ test_project
 <h5>Add an exploration</h5>
 <h5>Add a model</h5>
 <h5>Add a product</h5>
-
-
-### Attribution
-<a href="https://www.flaticon.com/free-icons/professor" title="icon">Logo icon created by Freepik - Flaticon</a>

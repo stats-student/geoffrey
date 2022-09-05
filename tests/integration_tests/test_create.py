@@ -63,7 +63,7 @@ def test_tree_is_displayed(tmp_path):
 
     result = runner.invoke(app, ["create", "test_project"])
 
-    expected_out = """test_project
+    expected_out = """🖿 test_project
 ├── 🖿 data_sources
 ├── 🖿 explorations
 ├── 🖿 models

@@ -8,7 +8,7 @@
 geoff create [OPTIONS] NAME
 ```
 
-Creates a new project called `NAME`
+Creates a new project called `NAME` and creates the 4 sub directories that geoff manages along with a README and project scoping template.
 
 ## Arguments
 

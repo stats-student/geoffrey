@@ -8,3 +8,4 @@
 - [exploration](./commands/add/exploration.md)
 - [model](./commands/add/model.md)
 - [product](./commands/add/product.md)
+[image attribution](./attribution.md)

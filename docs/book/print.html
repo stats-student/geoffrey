@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="en" class="sidebar-visible no-js light">
     <head>
+        <script type="text/javascript" src=""></script>
+        
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Geoffrey documentation</title>
@@ -30,6 +32,7 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/my-css.css">
 
     </head>
     <body>
@@ -81,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Getting started</a></li><li class="chapter-item expanded affix "><a href="geoff.html">geoff</a></li><li class="chapter-item expanded affix "><a href="commands/create.html">create</a></li><li class="chapter-item expanded affix "><a href="commands/add.html">add</a></li><li class="chapter-item expanded "><a href="commands/add/data_source.html"><strong aria-hidden="true">1.</strong> data_source</a></li><li class="chapter-item expanded "><a href="commands/add/exploration.html"><strong aria-hidden="true">2.</strong> exploration</a></li><li class="chapter-item expanded "><a href="commands/add/model.html"><strong aria-hidden="true">3.</strong> model</a></li><li class="chapter-item expanded "><a href="commands/add/product.html"><strong aria-hidden="true">4.</strong> product</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Getting started</a></li><li class="chapter-item expanded affix "><a href="geoff.html">geoff</a></li><li class="chapter-item expanded affix "><a href="commands/create.html">create</a></li><li class="chapter-item expanded affix "><a href="commands/add.html">add</a></li><li class="chapter-item expanded "><a href="commands/add/data_source.html">data_source</a></li><li class="chapter-item expanded "><a href="commands/add/exploration.html">exploration</a></li><li class="chapter-item expanded "><a href="commands/add/model.html">model</a></li><li class="chapter-item expanded "><a href="commands/add/product.html">product</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -116,6 +119,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/stats-student/geoffrey" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -143,7 +149,7 @@
                 <div id="content" class="content">
                     <main>
                         <p align="center">
-    <img src="static/images/geoffrey-logo.png">
+    <img src="static/images/geoffrey-logo.png" class="logo">
 </p>
 <p align="center">
 A simple tool to automate the creation of some folders and files for my
@@ -153,11 +159,19 @@ data science projects
 Geoffrey is a tool to automate and standardise(ish) the admin in my data science projects by creating folders and common files to speed up project setup and ensure that every project has a similar layout.
 <br>
 My general workflow for a data science project consists of 4 steps:
-<ul>
-<li>📄 Data sources</li>
-<li>🔎 Exploration</li>
-<li>📈 Models</li>
-<li>🎁 Products</li>
+<ul style="list-style: none;">
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/folder.png" height="25px" width="25px" style="vertical-align: middle; padding-right: 5px;">  Data sources 
+  </li>
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/magnifying-glass.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Exploration
+  </li>
+  <li style="margin-bottom: 10px;">
+    <img src="static/images/bar-chart.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Models
+  </li>
+  <li>
+    <img src="static/images/gift-box.png" height="25px" width="25px" style="vertical-align: middle;padding-right: 5px;"> Products
+  </li>
 </ul>
 <p>Geoffrey allows you to create projects and add in each of these 4 components in a modular way.</p>
 <p>The quickstart is below and the manual for the different commands is <a href="docs/geoff.html">here</a></p>
@@ -187,8 +201,6 @@ test_project
 <h5 id="add-an-exploration"><a class="header" href="#add-an-exploration">Add an exploration</a></h5>
 <h5 id="add-a-model"><a class="header" href="#add-a-model">Add a model</a></h5>
 <h5 id="add-a-product"><a class="header" href="#add-a-product">Add a product</a></h5>
-<h3 id="attribution"><a class="header" href="#attribution">Attribution</a></h3>
-<p><a href="https://www.flaticon.com/free-icons/professor" title="icon">Logo icon created by Freepik - Flaticon</a></p>
 <div style="break-before: page; page-break-before: always;"></div><p align="center">
     <img src="static/images/geoffrey-logo.png">
 </p>
@@ -217,7 +229,7 @@ foo@bar:~$ geoff add data_source some_data_source
 <h1 id="geoff-create"><a class="header" href="#geoff-create">geoff create</a></h1>
 <pre><code class="language-shell">geoff create [OPTIONS] NAME
 </code></pre>
-<p>Creates a new project called <code>NAME</code></p>
+<p>Creates a new project called <code>NAME</code> and creates the 4 sub directories that geoff manages along with a README and project scoping template.</p>
 <h2 id="arguments"><a class="header" href="#arguments">Arguments</a></h2>
 <p><code>name</code>
 The name of the project. This can be a project name or a path with the final directory in the path being the project name.</p>
@@ -261,7 +273,7 @@ test_project
 └── 🗋 project_scoping.md
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><p align="center">
-    <img src="commands/static/images/geoffrey-logo.png">
+    <img src="commands/../static/images/geoffrey-logo.png">
 </p>
 <h1 id="geoff-add"><a class="header" href="#geoff-add">geoff add</a></h1>
 <p>The add subcommand adds an instance of the requested step (data source, exploration, model or product).</p>
@@ -285,7 +297,56 @@ foo@bar:~$ geoff add exploration some_exploration
 foo@bar:~$ geoff add model some_model
 foo@bar:~$ geoff add product some_product
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="data-source"><a class="header" href="#data-source">Data Source</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p align="center">
+    <img src="commands/add/../../static/images/geoffrey-logo.png">
+</p>
+<h1 id="geoff-add-data-source"><a class="header" href="#geoff-add-data-source">geoff add data-source</a></h1>
+<pre><code class="language-shell">geoff add data-source [OPTIONS] NAME
+</code></pre>
+<p>Adds a new folder in data_sources folder called <code>NAME</code> which contains a metadata markdown document to populate. The metadata file captures some details about the data source and any key people that were involved in the collection or authorisation to access the data.</p>
+<p>There are three different metadata templates that are created depending on whether the data source is a </p>
+<p><img src="commands/add/../../static/images/db.png" height="25px" width="25px" style="vertical-align: middle;"> database source</p>
+<p><img src="commands/add/../../static/images/folder.png" height="25px" width="25px" style="vertical-align: middle;"> extract source</p>
+<img src="commands/add/../../static/images/cloud-download.png" height="25px" width="25px" style="vertical-align: middle;"> 
+web download source
+<h2 id="arguments-1"><a class="header" href="#arguments-1">Arguments</a></h2>
+<p><code>name</code>
+The name of the data sources</p>
+<p>Data source name</p>
+<pre><code class="language-shell">foo@bar:~$ geoff create iris
+</code></pre>
+<p>If no options are passed a directory is created with an empty metadata.md</p>
+<h2 id="options-3"><a class="header" href="#options-3">Options</a></h2>
+<p><code>--parents</code> \ <code>--no-parents</code></p>
+<p>Default: <code>--no-parents</code></p>
+<p>Whether to create the parents of the supplied path or not.</p>
+<p><code>--help</code>
+Shows help message and exits</p>
+<h2 id="examples-3"><a class="header" href="#examples-3">Examples</a></h2>
+<p>Create a project</p>
+<pre><code class="language-shell">foo@bar:~$ geoff create test_project
+🚀 test_project created!
+
+test_project
+├── 🖿 data_sources
+├── 🖿 explorations
+├── 🖿 models
+├── 🖿 products
+├── 🗋 README.md
+└── 🗋 project_scoping.md
+</code></pre>
+<p>Create a project and parents of specified path</p>
+<pre><code class="language-shell">foo@bar:~$ geoff create --parents path/to/test_project
+🚀 test_project created!
+
+test_project
+├── 🖿 data_sources
+├── 🖿 explorations
+├── 🖿 models
+├── 🖿 products
+├── 🗋 README.md
+└── 🗋 project_scoping.md
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exploration"><a class="header" href="#exploration">Exploration</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="model"><a class="header" href="#model">Model</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="product"><a class="header" href="#product">Product</a></h1>
@@ -307,6 +368,22 @@ foo@bar:~$ geoff add product some_product
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
@@ -324,6 +401,7 @@ foo@bar:~$ geoff add product some_product
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/my-js.js"></script>
 
         <script type="text/javascript">
         window.addEventListener('load', function() {
