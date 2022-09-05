@@ -2,10 +2,16 @@
     <img src="docs/src/static/images/geoffrey-logo.png#gh-light-mode-only">
     <img src="docs/src/static/images/geoffrey-logo-dark.png#gh-dark-mode-only">
 </p>
-
 <p align="center">
 A simple tool to automate the creation of some folders and files for my
 data science projects
+</p>
+
+<p align="center">
+    <img src="https://github.com/danielyates2/geoffrey/actions/workflows/ci.yml/badge.svg" alt="ci">
+    <a href="https://codecov.io/gh/danielyates2/geoffrey" > 
+        <img src="https://codecov.io/gh/danielyates2/geoffrey/branch/main/graph/badge.svg?token=ZFU8ZYE9HG"/> 
+    </a>
 </p>
 
 <h3>Introduction</h3>
