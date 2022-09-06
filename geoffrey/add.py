@@ -57,8 +57,10 @@ def data_source(
             md.write(contents)
 
         tree = Tree("[gold1]\U0001F5BF [bold dodger_blue2]data_sources")
-        tree.add("[gold1]\U0001F5BF [bold dodger_blue2]test_data_sources")
-        tree.add("[honeydew2]\U0001F5CB [spring_green2]metadata.md")
+        tree_ds = tree.add(f"[gold1]\U0001F5BF [bold dodger_blue2]{name}")
+        tree_ds.add("[honeydew2]\U0001F5CB [spring_green2]metadata.md")
+
+        print(f"\U0001FA3F {name} added!\n")
         rich.print(tree)
 
     else:

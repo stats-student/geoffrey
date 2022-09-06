@@ -46,12 +46,13 @@ def test_add_data_source_no_options_empty_template(create_root):
 def test_add_data_source_no_options_output_printed(create_root):
     result = runner.invoke(app, ["data-source", "test_data_source"])
 
-    expected_output = """
+    expected_output = """\U0001FA3F test_data_source added!
+
 🖿 data_sources
-├── 🖿 test_data_sources
-└── 🗋 metadata.md
-    """
-    expected_output in result.stdout
+└── 🖿 test_data_source
+    └── 🗋 metadata.md
+"""
+    assert expected_output in result.stdout
 
 
 ## ######## ##
@@ -88,12 +89,13 @@ def test_database_source_files_placeholders_replaced(create_root, option):
 def test_add_data_source_db_output_printed(create_root, option):
     result = runner.invoke(app, ["data-source", "test_db_data_source", option])
 
-    expected_output = """
+    expected_output = """\U0001FA3F test_db_data_source added!
+
 🖿 data_sources
-├── 🖿 test_db_data_sources
-└── 🗋 metadata.md
-    """
-    expected_output in result.stdout
+└── 🖿 test_db_data_source
+    └── 🗋 metadata.md
+"""
+    assert expected_output in result.stdout
 
 
 ## ####### ##
@@ -130,12 +132,13 @@ def test_extract_source_files_placeholders_replaced(create_root, option):
 def test_add_data_source_extract_output_printed(create_root, option):
     result = runner.invoke(app, ["data-source", "test_extract_data_source", option])
 
-    expected_output = """
+    expected_output = """\U0001FA3F test_extract_data_source added!
+
 🖿 data_sources
-├── 🖿 test_extract_data_sources
-└── 🗋 metadata.md
-    """
-    expected_output in result.stdout
+└── 🖿 test_extract_data_source
+    └── 🗋 metadata.md
+"""
+    assert expected_output in result.stdout
 
 
 ## ############ ##
@@ -182,9 +185,10 @@ def test_add_data_source_no_web_download_output_printed(create_root, option):
         app, ["data-source", "test_web_download_data_source", option]
     )
 
-    expected_output = """
+    expected_output = """\U0001FA3F test_web_download_data_source added!
+
 🖿 data_sources
-├── 🖿 test_web_download_data_sources
-└── 🗋 metadata.md
-    """
-    expected_output in result.stdout
+└── 🖿 test_web_download_data_source
+    └── 🗋 metadata.md
+"""
+    assert expected_output in result.stdout
