@@ -6,6 +6,8 @@ import typer
 
 from rich.tree import Tree
 
+from .add_commands._add_data_source_command import AddDataSourceCommand
+
 
 logger = logging.getLogger(__name__)
 
@@ -23,42 +25,27 @@ def data_source(
     Adds a data source folder called NAME in the data_sources
     directory
     """
-    if pathlib.Path(".geoff").exists():
-        logger.info(f"adding data source {name}")
-        pathlib.Path(f"data_sources/{name}").mkdir()
+    ads = AddDataSourceCommand(f"{name}")
+
+    if ads.check_is_geoff_dir():
+        logger.info(f"adding data source {ads.name}")
+        ads.create_dir()
 
         if database_source:
-            metadata_template = (
-                pathlib.Path(__file__).parent / "templates/data_sources/db_metadata.md"
-            )
+            ads.copy_templates("db_metadata.md")
+        
         elif extract_source:
-            metadata_template = (
-                pathlib.Path(__file__).parent
-                / "templates/data_sources/extract_metadata.md"
-            )
+            ads.copy_templates("extract_metadata.md")
+            
         elif web_source:
-            metadata_template = (
-                pathlib.Path(__file__).parent / "templates/data_sources/web_metadata.md"
-            )
+            ads.copy_templates("web_metadata.md")
+            
         else:
-            metadata_template = (
-                pathlib.Path(__file__).parent
-                / "templates/data_sources/empty_metadata.md"
-            )
+            ads.copy_templates("empty_metadata.md")
 
-        logger.info(f"Copying {metadata_template.name} to data_sources folder")
-        shutil.copy(str(metadata_template), str(f"data_sources/{name}/metadata.md"))
+        ads.replace_placeholders()
 
-        with open(f"data_sources/{name}/metadata.md", "r") as md:
-            contents = md.read()
-            contents = contents.replace("<-project_name->", name)
-
-        with open(f"data_sources/{name}/metadata.md", "w") as md:
-            md.write(contents)
-
-        tree = Tree("[gold1]\U0001F5BF [bold dodger_blue2]data_sources")
-        tree_ds = tree.add(f"[gold1]\U0001F5BF [bold dodger_blue2]{name}")
-        tree_ds.add("[honeydew2]\U0001F5CB [spring_green2]metadata.md")
+        tree = ads.create_tree()
 
         print(f"\U0001FA3F {name} added!\n")
         rich.print(tree)

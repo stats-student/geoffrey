@@ -23,6 +23,7 @@ class CreateCommand:
         Attributes
         ----------
         _subdirs: The subdirs to be created
+        path: A pathlib.Path of the path passed as a parameter
         """
         self._subdirs = ["data_sources", "explorations", "models", "products"]
         self.path = self._validate_path(path)
